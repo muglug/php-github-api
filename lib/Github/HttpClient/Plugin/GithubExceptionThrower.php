@@ -53,7 +53,7 @@ class GithubExceptionThrower implements Plugin
                     $errors = [];
                     foreach ($content['errors'] as $error) {
                         if (is_string($error)) {
-                            $errors[] = $error['message'];
+                            $errors[] = $error;
                         } else {
                             switch ($error['code']) {
                                 case 'missing':
